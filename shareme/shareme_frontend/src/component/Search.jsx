@@ -1,7 +1,7 @@
 import React from "react";
 
 const Search = () => {
-  return <div className="bg-[red]"></div>;
+  return <div className=""></div>;
 };
 
 export default Search;

@@ -1,8 +1,9 @@
 import React from 'react'
 
 const UserProfile = () => {
+console.log("fosjfoiejn")
   return (
-    <div>
+    <div className=''>
       UserProfile
     </div>
   )
