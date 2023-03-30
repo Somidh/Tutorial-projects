@@ -48,6 +48,7 @@ const CreatePin = ({ user }) => {
       setWrongImageType(true);
     }
   };
+  console.log("asset:",imageAsset)
 
   const savePin = () => {
     if (title && about && destination && imageAsset?._id && category) {

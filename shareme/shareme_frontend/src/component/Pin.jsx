@@ -16,8 +16,6 @@ const Pin = ({ pin }) => {
   const alreadySaved = !!save?.filter((item) => item.postedBy._id === user.sub)
     ?.length;
 
-  // console.log("user", user.sub);
-
   const savePin = (id) => {
     if (alreadySaved?.length === 0) {
       client
@@ -54,11 +52,13 @@ const Pin = ({ pin }) => {
         onClick={() => navigate(`/pin-detail/${_id}`)}
         className="relative cursor-zoom-in w-auto hover:shadow-lg rounded-lg overflow-hidden transition-all duration-500 ease-in-out"
       >
-        <img
-          src={urlFor(postedBy?.image).width(250).url()}
-          alt="user-post"
-          className="rounded-lg w-full"
-        />
+        {image && (
+          <img
+            src={urlFor(image.asset.url).width(250)}
+            alt="user-post"
+            className="rounded-lg w-full"
+          />
+        )}
 
         {postHovered && (
           <div
